@@ -1,0 +1,29 @@
+{{ define "main" }}
+<div class="col-xs-12 col-sm-8 col-md-9 content-column white-background">
+  {{ partial "mobile_nav_toggle.html" . }}
+  <div class="row">
+    <div class="col-lg-8">
+      <div class="content-column-content">
+         <h1>{{ .Title }}</h1>
+         {{ .Description }}
+         <h5 style='color: gray; padding: 20px;'>
+             {{ range .Params.Tasks }}
+             {{ . }}&nbsp;&nbsp;
+             {{ end }}
+         </h5>
+         <div style="padding: 20px;">
+             <img src={{ .Params.Image }}></img>
+         </div>
+         <div style="padding: 20px;">
+             {{ if isset .Params "subimages" }}
+                {{ range .Params.Subimages }}
+                <img src={{ . }}></img>
+                {{ end }}
+             {{ end }}
+         </div>
+         {{ template "_internal/disqus.html" . }}
+      </div>
+    </div>
+  </div>
+</div>
+{{ end }}
