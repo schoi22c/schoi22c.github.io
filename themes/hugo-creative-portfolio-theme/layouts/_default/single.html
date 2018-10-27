@@ -14,13 +14,13 @@
          <div style="padding: 20px;">
              <img src={{ .Params.Image }}></img>
          </div>
-         <div style="padding: 20px;">
-             {{ if isset .Params "subimages" }}
-                {{ range .Params.Subimages }}
-                <img src={{ . }}></img>
-                {{ end }}
-             {{ end }}
-         </div>
+         {{ if isset .Params "subimages" }}
+            {{ range .Params.Subimages }}
+                <div style="padding: 20px;">
+                    <img src={{ . }}></img>
+                 </div>
+            {{ end }}
+         {{ end }}
          {{ template "_internal/disqus.html" . }}
       </div>
     </div>
