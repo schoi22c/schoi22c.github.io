@@ -1,14 +1,13 @@
-#baseURL = "https://vigorous-kalam-4406cd.netlify.com"
-baseURL = "https://www.studionomic.com"
+baseURL = "https://www.codedaft.com"
 languageCode = "en-us"
-title = "Studionomic"
+title = "studio"
 theme = "hugo-creative-portfolio-theme"
 [params]
   # Style options: default (pink), blue, green, pink, red, sea, violet
   # Use custom.css for your custom styling
   style = "default"
   description = "Describe your website"
-  copyright = "&copy;2018 Studionomic"
+  copyright = "&copy;2018 codedaft.com"
   sidebarAbout = [
     "I am a creative illustrator and graphic designer with more than 10 years of experience.",
     "currently based in New Jersey."
